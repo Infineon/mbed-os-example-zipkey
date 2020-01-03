@@ -1,0 +1,20 @@
+{
+    "macros": [
+        "MBEDTLS_PEM_WRITE_C",
+        "MBEDTLS_SHA1_C",
+        "MBEDTLS_GENPRIME",
+        "MBEDTLS_PK_WRITE_C",
+        "MBEDTLS_PKCS5_C",
+        "HTTP_SERVER_EVENT_THREAD_STACK_SIZE=8000"
+    ],
+
+   "target_overrides": {
+        "*": {
+            "platform.stdio-convert-newlines": true,
+            "target.network-default-interface-type": "WIFI",
+            "nsapi.default-wifi-security": "WPA_WPA2",
+            "nsapi.default-wifi-ssid": "\"SSID\"",
+            "nsapi.default-wifi-password": "\"Pwd\""
+        }
+    }
+}
